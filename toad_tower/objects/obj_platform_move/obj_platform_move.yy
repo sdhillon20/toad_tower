@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_meteor",
+  "name": "obj_platform_move",
   "spriteId": {
-    "name": "spr_meteor",
-    "path": "sprites/spr_meteor/spr_meteor.yy",
+    "name": "spr_platform",
+    "path": "sprites/spr_platform/spr_platform.yy",
   },
   "solid": false,
   "visible": true,
