@@ -1,4 +1,4 @@
-var display_score = -score; // assuming score increases as player goes upward
+var display_score = +score; // assuming score increases as player goes upward
 var center_x = display_get_gui_width() / 2;
 var center_y = 20;
 

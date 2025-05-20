@@ -1,90 +1,53 @@
-if (show_tutorial) {
-    can_move = false;
-    // Wait for Enter to finish tutorial
-    if (keyboard_check_pressed(vk_enter)) {
-        show_tutorial = false;
-        can_move = true;
-    }
-    exit; // Don't run rest of code during tutorial
+// ##################### CONTROLS #####################
+move_x = keyboard_check(vk_right) - keyboard_check(vk_left);  // Determine left or right movement
+move_x *= move_speed;
+
+jump_pressed = keyboard_check_pressed(vk_space);  // Check if jumping
+
+
+// ##################### CHECK FOR COLLISIONS #####################
+// Check if standing on ground
+is_grounded = place_meeting(x, y+2, ground_object);
+is_ceiling = place_meeting(x, y-2, ground_object);
+
+
+
+
+// ##################### MOVEMENT #####################
+
+
+// Jumping
+	if (is_grounded) {
+		move_y = 0;  // Get rid of gravity which presses object into the ground (too much friction which prevents horizontal movement)
+		if (jump_pressed) {
+			move_y = jump_speed;  // Jump
+		}
+	}
+	
+// Falling
+	else if (!is_grounded && move_y < max_fall_speed) {  // Only allow gravity if not on the ground and if below max fall speed
+		move_y += gravity_force;
+	}
+
+
+
+// ##################### ACTUALLY MOVE THE PLAYER OBJECT #####################
+move_and_collide(move_x, move_y, ground_object);  // Move the object
+
+
+// ##################### AVOID STICKING TO THE SIDES AND BOTTOM OF PLATFORMS #####################
+if (place_meeting(x+2, 0, ground_object)) {  // If hitting platform to the right, move back to the left
+	move_x -= 2;  // Increase value for bigger bounce
+}
+else if (place_meeting(x-2, 0, ground_object)) { // If hitting platform to the left, move back to the right
+	move_x += 2; // Increase value for bigger bounce
+}
+else if (is_ceiling) { // If hitting ceiling (platform above), move back down
+	move_y = 10; // Increase value for bigger bounce
 }
 
-if (!can_move) exit;
 
-// Apply gravity if not on lilypad
-if (!on_lilypad) {
-    vspeed += gravity;
-    y += vspeed;
-}
-
-// Horizontal movement
-if (keyboard_check(vk_left)) {
-    x -= move_speed;
-    sprite_index = spr_frog_idle;
-    image_xscale = -1; // face left
-}
-else if (keyboard_check(vk_right)) {
-    x += move_speed;
-    sprite_index = spr_frog_idle;
-    image_xscale = 1; // face right
-}
-
-// Jump
-if (on_lilypad && keyboard_check_pressed(vk_space)) {
-    vspeed = -jump_power;
-    on_lilypad = false;
-    sprite_index = spr_frog_jump;
-    image_speed = 0.3;
-    audio_play_sound(snd_jump, 1, false);
-}
-
-// Check landing on lilypad
-var pad = instance_place(x, y + 4, obj_lilypad);
-if (pad != noone && vspeed >= 0) {
-    y = pad.y - sprite_get_height(sprite_index)/2;
-    on_lilypad = true;
-    vspeed = 0;
-    sprite_index = spr_frog_idle;
-    image_speed = 0;
-    score += 1; // +1 point for each successful jump/landing
-}
-
-// Collide with meteors
-if (place_meeting(x, y, obj_meteor)) {
-    hp -= 1;
-    audio_play_sound(snd_explosion, 1, false);
-    if (hp <= 0) {
-        show_message("Game Over! Score: " + string(score));
-        game_restart();
-    }
-    else {
-        // Knock back frog
-        x -= 30 * image_xscale;
-        y -= 20;
-    }
-}
-
-// Collect weapons/powers
-var weapon = instance_place(x, y, obj_weapon);
-if (weapon != noone) {
-    ds_list_add(inventory, weapon.weapon_type);
-    current_weapon = weapon.weapon_type; // auto-switch
-    weapon.instance_destroy();
-    score += 10;
-}
-
-// Use weapon (laser)
-if (current_weapon == "laser" && mouse_check_button_pressed(mb_left)) {
-    var bullet = instance_create_layer(x + image_xscale * 16, y, "Instances", obj_laser_bullet);
-    bullet.direction = image_xscale == 1 ? 0 : 180;
-    bullet.speed = 12;
-    audio_play_sound(snd_laser, 1, false);
-}
-
-// Use portal speed boost
-if (place_meeting(x, y, obj_portal)) {
-    audio_play_sound(snd_portal, 1, false);
-    move_speed = 8;
-}
-else {
-    move_speed = 4;
+// ##################### OUTSIDE ROOM #####################
+if (y < -200 || y > room_height+20 || x < -20 || x > room_width+20) {  // Set the 4 boundaries of the room
+	room_restart(); // Restart room if object is outside the room
 }
