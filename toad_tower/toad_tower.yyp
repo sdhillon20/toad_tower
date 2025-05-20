@@ -54,8 +54,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"splash_screen","path":"rooms/splash_screen/splash_screen.yy",},},
     {"roomId":{"name":"main","path":"rooms/main/main.yy",},},
+    {"roomId":{"name":"splash_screen","path":"rooms/splash_screen/splash_screen.yy",},},
     {"roomId":{"name":"controls","path":"rooms/controls/controls.yy",},},
     {"roomId":{"name":"gameover","path":"rooms/gameover/gameover.yy",},},
   ],
