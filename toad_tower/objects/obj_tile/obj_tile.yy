@@ -6,7 +6,7 @@
     "name": "spr_tile",
     "path": "sprites/spr_tile/spr_tile.yy",
   },
-  "solid": true,
+  "solid": false,
   "visible": true,
   "managed": true,
   "spriteMaskId": null,

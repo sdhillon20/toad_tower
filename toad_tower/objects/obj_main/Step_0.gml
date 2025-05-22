@@ -1,5 +1,19 @@
+// ##################### CONTROLS #####################
+move_x = keyboard_check(vk_right) - keyboard_check(vk_left);  // Determine left or right movement
+move_x *= move_speed;
 
-// ##################### MOVEMENT #####################
+jump_pressed = keyboard_check_pressed(vk_space);  // Check if jumping
+
+
+// ##################### CHECK FOR COLLISIONS #####################
+// Check if standing on ground
+is_grounded = place_meeting(x, y+2, ground_object);
+is_ceiling = place_meeting(x, y-2, ground_object);
+
+
+
+
+
 
 
 // Jumping
@@ -28,6 +42,17 @@ if (place_meeting(x+2, 0, ground_object)) {  // If hitting platform to the right
 else if (place_meeting(x-2, 0, ground_object)) { // If hitting platform to the left, move back to the right
 	move_x += 2; // Increase value for bigger bounce
 }
+else if (is_ceiling) { // If hitting ceiling (platform above), move back down
+	move_y = 10; // Increase value for bigger bounce
+}
+
+
+// Only increase score every 16 pixels upward
+if (y < highest_y - 16) {
+    highest_y -= 16;  // move the threshold up by 16
+    score += 1;
+}
+
 
 
 
