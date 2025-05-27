@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_ground",
+  "name": "obj_platform_disappear",
   "spriteId": {
-    "name": "spr_platform",
-    "path": "sprites/spr_platform/spr_platform.yy",
+    "name": "spr_platform_disappear",
+    "path": "sprites/spr_platform_disappear/spr_platform_disappear.yy",
   },
   "solid": false,
   "visible": true,
