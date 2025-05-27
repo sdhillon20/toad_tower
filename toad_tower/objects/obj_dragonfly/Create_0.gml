@@ -1,5 +1,3 @@
-speed = 1; // how fast the dragonfly moves upward
-riding = false; // will be true if the frog is riding
-
-
-
+ride_duration = 20 * room_speed; // 3 seconds
+rider = noone;
+speed = 3;

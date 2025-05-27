@@ -1,7 +1,5 @@
-// Start riding when frog lands on top
-if (obj_main.vspeed > 0 && obj_main.y < y) {
-    riding = true;
+if (rider == noone) {
+    rider = other;
+    rider.ride_time = 0;
+    rider.is_riding = true;
 }
-
-
-

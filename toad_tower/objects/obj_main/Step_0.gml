@@ -53,6 +53,21 @@ if (y < highest_y - 16) {
     score += 1;
 }
 
+// Move left
+if (keyboard_check(vk_left)) {
+    x -= 4;
+    sprite_index = spr_main_left;
+}
+
+// Move right
+else if (keyboard_check(vk_right)) {
+    x += 4;
+    sprite_index = spr_main;
+}
+
+
+vspeed += 0.5; // Gravity
+y += vspeed;
 
 
 

@@ -8,3 +8,5 @@ draw_text(display_get_gui_width() / 2, 20, "Score: " + string(score));
 
 
 
+draw_set_font(Font1); 
+

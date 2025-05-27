@@ -19,5 +19,3 @@ highest_y = y;
 
 
 
-
-
