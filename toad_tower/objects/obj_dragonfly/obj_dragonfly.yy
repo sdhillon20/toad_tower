@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_dragonfly",
   "spriteId": {
-    "name": "spr_dragonfly",
-    "path": "sprites/spr_dragonfly/spr_dragonfly.yy",
+    "name": "spr_dragonfly_left",
+    "path": "sprites/spr_dragonfly_left/spr_dragonfly_left.yy",
   },
   "solid": false,
   "visible": true,
