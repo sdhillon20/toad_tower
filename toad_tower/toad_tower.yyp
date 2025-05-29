@@ -27,7 +27,7 @@
     {"id":{"name":"obj_platform_disappear","path":"objects/obj_platform_disappear/obj_platform_disappear.yy",},"order":17,},
     {"id":{"name":"spr_main_left","path":"sprites/spr_main_left/spr_main_left.yy",},"order":21,},
     {"id":{"name":"obj_space_ship","path":"objects/obj_space_ship/obj_space_ship.yy",},"order":16,},
-    {"id":{"name":"spr_","path":"sprites/spr_/spr_.yy",},"order":23,},
+    {"id":{"name":"spr_bg_3","path":"sprites/spr_bg_3/spr_bg_3.yy",},"order":23,},
     {"id":{"name":"obj_arrow","path":"objects/obj_arrow/obj_arrow.yy",},"order":10,},
     {"id":{"name":"obj_start","path":"objects/obj_start/obj_start.yy",},"order":5,},
     {"id":{"name":"spr_splash","path":"sprites/spr_splash/spr_splash.yy",},"order":8,},
@@ -67,8 +67,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"main","path":"rooms/main/main.yy",},},
     {"roomId":{"name":"splash_screen","path":"rooms/splash_screen/splash_screen.yy",},},
+    {"roomId":{"name":"main","path":"rooms/main/main.yy",},},
     {"roomId":{"name":"controls","path":"rooms/controls/controls.yy",},},
     {"roomId":{"name":"gameover","path":"rooms/gameover/gameover.yy",},},
   ],

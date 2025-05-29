@@ -6,7 +6,7 @@
     "name": "spr_tile",
     "path": "sprites/spr_tile/spr_tile.yy",
   },
-  "solid": false,
+  "solid": true,
   "visible": true,
   "managed": true,
   "spriteMaskId": null,
@@ -24,7 +24,9 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_main","path":"objects/obj_main/obj_main.yy",},},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
