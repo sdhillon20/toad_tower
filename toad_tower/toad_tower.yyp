@@ -5,6 +5,7 @@
   "resources": [
     {"id":{"name":"main","path":"rooms/main/main.yy",},"order":1,},
     {"id":{"name":"spr_meteor","path":"sprites/spr_meteor/spr_meteor.yy",},"order":3,},
+    {"id":{"name":"Sprite26","path":"sprites/Sprite26/Sprite26.yy",},"order":32,},
     {"id":{"name":"spr_main","path":"sprites/spr_main/spr_main.yy",},"order":0,},
     {"id":{"name":"Font1","path":"fonts/Font1/Font1.yy",},"order":0,},
     {"id":{"name":"spr_bg","path":"sprites/spr_bg/spr_bg.yy",},"order":4,},
@@ -41,6 +42,7 @@
     {"id":{"name":"obj_attack","path":"objects/obj_attack/obj_attack.yy",},"order":18,},
     {"id":{"name":"spr_alien","path":"sprites/spr_alien/spr_alien.yy",},"order":19,},
     {"id":{"name":"obj_platform","path":"objects/obj_platform/obj_platform.yy",},"order":4,},
+    {"id":{"name":"obj_restart","path":"objects/obj_restart/obj_restart.yy",},"order":19,},
     {"id":{"name":"obj_controls","path":"objects/obj_controls/obj_controls.yy",},"order":7,},
     {"id":{"name":"spr_retry","path":"sprites/spr_retry/spr_retry.yy",},"order":17,},
     {"id":{"name":"spr_menu","path":"sprites/spr_menu/spr_menu.yy",},"order":16,},
