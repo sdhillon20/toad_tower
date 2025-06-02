@@ -18,4 +18,8 @@ score = 0;
 highest_y = y;
 
 
+global.inSpaceship = false;
+visible = true;
 
+invincible = false;
+invincible_timer = 0;

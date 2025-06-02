@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_alien",
+  "name": "obj_attack",
   "spriteId": {
-    "name": "spr_alien",
-    "path": "sprites/spr_alien/spr_alien.yy",
+    "name": "spr_main_attack_right",
+    "path": "sprites/spr_main_attack_right/spr_main_attack_right.yy",
   },
   "solid": false,
   "visible": true,
@@ -24,9 +24,7 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_main","path":"objects/obj_main/obj_main.yy",},},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {

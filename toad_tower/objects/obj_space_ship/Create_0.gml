@@ -1,0 +1,1 @@
+global.inSpaceship = false;
