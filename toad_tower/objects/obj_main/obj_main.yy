@@ -33,6 +33,8 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_platform","path":"objects/obj_platform/obj_platform.yy",},},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_space_ship","path":"objects/obj_space_ship/obj_space_ship.yy",},},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_dragonfly","path":"objects/obj_dragonfly/obj_dragonfly.yy",},},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_platform_move","path":"objects/obj_platform_move/obj_platform_move.yy",},},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_platform_disappear","path":"objects/obj_platform_disappear/obj_platform_disappear.yy",},},
   ],
   "properties": [],
   "overriddenProperties": [],
