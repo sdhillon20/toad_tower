@@ -1,12 +1,15 @@
-
 x += hspd;
 
-if (x > startX + range || x < startX - range) {
-    hspd *= -1; // reverse direction
+if (x > x_start + distance || x < x_start - distance) {
+    hspd = -hspd; // reverse direction when reaching limits
 }
+// Save how much the platform moved this frame
+var dx = hspd;
 
-// Only trigger jump if the frog is falling
-if (vspeed > 0) {
-    vspeed = -15; // BIG jump! Adjust value as needed
+// Move player if standing on the platform
+with (obj_main) {
+    // Check if player is on top of this platform
+    if (place_meeting(x, y + 1, other)) {
+        x += dx;
+    }
 }
-

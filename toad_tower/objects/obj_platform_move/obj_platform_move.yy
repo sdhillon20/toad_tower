@@ -6,7 +6,7 @@
     "name": "spr_platform",
     "path": "sprites/spr_platform/spr_platform.yy",
   },
-  "solid": false,
+  "solid": true,
   "visible": true,
   "managed": true,
   "spriteMaskId": null,

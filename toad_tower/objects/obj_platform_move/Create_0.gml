@@ -1,5 +1,3 @@
-hspd = 2; // horizontal speed
-range = 100; // how far to move from start position
-startX = x; // remember starting position
-
-
+hspd = 2;         // speed
+x_start = x;      // starting x position
+distance = 100;   // how far to move left and right
