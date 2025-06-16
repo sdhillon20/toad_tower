@@ -69,43 +69,14 @@ else if (keyboard_check(vk_right)) {
 vspeed += 0.5; // Gravity
 y += vspeed;
 
+// Move with left/right keys
+if (keyboard_check(vk_left))  x -= move_speed;
+if (keyboard_check(vk_right)) x += move_speed;
 
 
-// Only move if not inside spaceship
-if (!global.inSpaceship) {
-    if (keyboard_check(vk_left)) x -= 4;
-    if (keyboard_check(vk_right)) x += 4;
-    if (keyboard_check(vk_up)) y -= 4;
-    if (keyboard_check(vk_down)) y += 4;
+if (score > highscore) {
+    highscore = score;
 }
 
-visible = true;
-global.inSpaceship = true;
-x = obj_main.x;
-y = obj_main.y;
+// Then go to game over room
 
-if (!global.inSpaceship) {
-    // Player's regular movement code
-}
-
-if (invincible) {
-    if (invincible_timer > 0) {
-        invincible_timer -= 1;
-    }
-
-    // Flashing effect while invincible
-    image_alpha = (invincible_timer mod 10 < 5) ? 0.5 : 1;
-
-    // When timer runs out, reset
-    if (invincible_timer <= 0) {
-        invincible = false;
-        image_alpha = 1;
-        sprite_index = spr_main;  // Replace with your normal sprite
-    }
-}
-
-if (invincible) {
-    show_debug_message("INVINCIBLE!");
-} else {
-    show_debug_message("VULNERABLE!");
-}

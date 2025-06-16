@@ -19,6 +19,7 @@
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"start","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2F8E3A68","properties":[],"isDnd":false,"objectId":{"name":"obj_start","path":"objects/obj_start/obj_start.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":0.77777773,"scaleY":0.7083333,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":-160.0,"y":-160.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1E80248E","properties":[],"isDnd":false,"objectId":{"name":"obj_controls","path":"objects/obj_controls/obj_controls.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.24628834,"scaleX":0.72222227,"scaleY":0.7361111,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":-128.0,"y":192.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1480790F","properties":[],"isDnd":false,"objectId":{"name":"start","path":"objects/start/start.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":768.0,"y":448.0,},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRAssetLayer","resourceVersion":"1.0","name":"spr","assets":[
         {"resourceType":"GMRSpriteGraphic","resourceVersion":"1.0","name":"graphic_21DF5799","spriteId":{"name":"spr_main","path":"sprites/spr_main/spr_main.yy",},"headPosition":0.0,"rotation":0.0,"scaleX":17.0,"scaleY":16.0,"animationSpeed":1.0,"colour":4294967295,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":480.0,"y":288.0,},
@@ -33,6 +34,7 @@
   "instanceCreationOrder": [
     {"name":"inst_2F8E3A68","path":"rooms/splash_screen/splash_screen.yy",},
     {"name":"inst_1E80248E","path":"rooms/splash_screen/splash_screen.yy",},
+    {"name":"inst_1480790F","path":"rooms/splash_screen/splash_screen.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

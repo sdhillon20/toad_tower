@@ -18,8 +18,14 @@ score = 0;
 highest_y = y;
 
 
-global.inSpaceship = false;
-visible = true;
+highscore = 0;
+global.final_score = score;
 
-invincible = false;
-invincible_timer = 0;
+
+
+
+
+
+boost_timer = 0;     
+boosted = false;       // not boosted yet
+image_blend = c_white; // normal color
